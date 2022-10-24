@@ -1,8 +1,23 @@
-﻿// holocure-data-importer.h : Include file for standard system include files,
-// or project specific include files.
+﻿#pragma once
+#include <wx/wx.h>
 
-#pragma once
+enum {
+    ID_HELLO = 1
+};
 
-#include <iostream>
+class MyApp : public wxApp
+{
+public:
+    virtual bool OnInit() override;
+};
 
-// TODO: Reference additional headers your program requires here.
+class MyFrame : public wxFrame
+{
+public:
+    MyFrame();
+
+private:
+    void OnHello(wxCommandEvent &event);
+    void OnExit(wxCommandEvent &event);
+    void OnAbout(wxCommandEvent &event);
+};
