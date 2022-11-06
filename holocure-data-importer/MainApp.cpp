@@ -9,15 +9,8 @@
 
 namespace cc::kelvinchin::HolocureDataImporter {
     bool MainApp::OnInit() {
-        MainFrame *frame = nullptr;
-        try {
-            frame = new MainFrame();
-            frame->Show(true);
-
-        } catch (const std::exception &) {
-            if (frame) delete frame;
-            return false;
-        }
+        auto mainFrame = new MainFrame();
+        mainFrame->Show(true);
         return true;
     }
 }
