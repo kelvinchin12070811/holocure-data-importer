@@ -8,9 +8,20 @@ set(CMAKE_INCLUDE_CURRENT_DIR on)
 
 find_package(wxWidgets CONFIG REQUIRED)
 
+set(PROJECT_SOURCES
+    "MainApp.cpp"
+    "Frames/MainFrame.cpp"
+    "Frames/ExportDataFrame.cpp"
+)
+
+set(PROJECT_HEADERS
+    "MainApp.hpp"
+    "Frames/MainFrame.hpp"
+    "Frames/ExportDataFrame.hpp"
+)
 
 if (WIN32)
-    add_executable (${PROJECT_NAME} WIN32 "holocure-data-importer.cpp" "holocure-data-importer.h")
+    add_executable (${PROJECT_NAME} WIN32 ${PROJECT_SOURCES} ${PROJECT_HEADERS})
 endif ()
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
