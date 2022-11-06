@@ -22,7 +22,7 @@ private:
     wxMenu *menuFile { nullptr };
     wxMenu *menuHelp { nullptr };
 
-    wxPanel *canvas { nullptr };
+    wxBoxSizer *canvas { nullptr };
     wxNotebook *tabs { nullptr };
 };
 }

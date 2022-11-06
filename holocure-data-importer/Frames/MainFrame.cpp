@@ -29,9 +29,8 @@ void MainFrame::SetupUI() {
 
     this->SetMenuBar(menuBar);
 
-    canvas = new wxPanel { this };
 
-    tabs = new wxNotebook { canvas, wxID_ANY, wxDefaultPosition, this->GetSize() };
+    tabs = new wxNotebook { this, wxID_ANY, wxDefaultPosition, this->GetSize() };
     tabs->AddPage(new ExportDataFrame(tabs), "Export and Import");
 }
 

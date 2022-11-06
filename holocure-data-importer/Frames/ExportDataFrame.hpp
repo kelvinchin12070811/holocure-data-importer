@@ -5,11 +5,22 @@
  **********************************************************************************************************************/
 #pragma once
 #include <wx/wx.h>
+#include <wx/filepicker.h>
 
 namespace cc::kelvinchin::HolocureDataImporter {
 class ExportDataFrame : public wxPanel
 {
 public:
     ExportDataFrame(wxWindow *parent);
+
+private:
+    void SetupUI();
+    void InitComponents();
+    void SetupLayout();
+
+private:
+    wxButton *importBtn { nullptr };
+    wxButton *exportBtn { nullptr };
+    wxDirPickerCtrl *holocureDataDir { nullptr };
 };
 }
